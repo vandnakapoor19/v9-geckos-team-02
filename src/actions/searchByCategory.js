@@ -23,7 +23,7 @@ const searchCtgFail = err => {
 }
 
 export const searchByCtg = id => {
-    // console.log('id',id)
+    // console.log('id',id)test
     return (dispatch, getState) => {
         dispatch(searchCtgStart());
         axios
