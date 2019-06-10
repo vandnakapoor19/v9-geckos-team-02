@@ -2,10 +2,10 @@ import React from 'react';
 import Category from '../../components/containers/category'
 
 const Home = () => (
-      <div >       
+      <section className="container">       
         
         <Category />
-      </div>
+      </section>
   );
 
 export default Home;

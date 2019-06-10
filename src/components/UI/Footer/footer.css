@@ -1,0 +1,19 @@
+footer{
+    background:#F1F2F2;
+    margin-bottom: 2%;
+}
+.footer-content{
+    display: flex;
+    margin: 0 auto !important;
+}
+
+nav ul{
+    list-style: none;
+}
+
+.footer-content nav{
+    margin:5%!important;
+}
+h3{
+    color: #000;
+}
