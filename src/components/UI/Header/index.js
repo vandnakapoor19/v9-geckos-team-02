@@ -3,9 +3,9 @@ import './header.css'
 
 const Header = () => (
   <div>
-    <nav className="navbar navbar-light bg-warning top justify-content-between" >
-      <span className="navbar-brand">Hi! Dear Guest</span>
-      <span className="navbar-brand my-1">cart</span>
+    <nav className="navbar bg-dark nav-height justify-content-between" >
+      <span className="navbar-brand text-white navbar-nav">Hi! Dear Guest</span>
+      <span className="navbar-brand text-white navbar-nav"><i class="fas fa-shopping-cart"></i></span>
     </nav>
 
     <nav className="navbar navbar-light justify-content-center" >
