@@ -1,8 +1,10 @@
 import React from 'react';
+import Category from '../../components/containers/category'
 
 const Home = () => (
       <div >       
-        <p>Home</p>
+        
+        <Category />
       </div>
   );
 
