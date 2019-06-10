@@ -10,7 +10,7 @@ const Header = () => (
           <li><a  className="current" href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+          <li><a href="/cart"><i className="fas fa-shopping-cart"></i></a></li>
           <li>
 
           <form className="form-inline my-2 my-lg-0 mi-auto header-style">
