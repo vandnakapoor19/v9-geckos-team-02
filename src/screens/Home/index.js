@@ -1,10 +1,12 @@
 import React from 'react';
-import Category from '../../components/containers/category'
+import HomeSlider from './homeslider';
+import Category from '../../components/containers/category';
 
 const Home = () => (
-      <section className="container">       
+      <section >       
+        <HomeSlider/>
+        <div className="container"><Category /></div>
         
-        <Category />
       </section>
   );
 
