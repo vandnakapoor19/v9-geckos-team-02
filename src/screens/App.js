@@ -5,6 +5,8 @@ import Home from './Home';
 import Product from './Product';
 import Cart from './Cart';
 import Checkout from './Checkout';
+import About from './About';
+import Contact from './Contact';
 
 import Footer from '../components/UI/Footer';
 import Header from '../components/UI/Header';
@@ -19,6 +21,8 @@ const App = () => (
           <Route exact path='/product/:id' component={Product} />
           <Route exact path='/cart' component={Cart} />
           <Route exact path='/checkout' component={Checkout} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
         </Switch>
       </main>
       <Footer />
