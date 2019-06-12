@@ -3,7 +3,7 @@ import React from 'react';
 const List = ({src, name, id, ctgClick}) => (
         <div 
             className="col-md-4 col-lg-3 col-sm-6 my-3"
-            onClick={() => ctgClick(id)}
+            onClick={() => ctgClick(id, name)}
             >
             <figure className="card card-sm card-product">
                 {/* <span className="badge-new"> NEW </span> */}
