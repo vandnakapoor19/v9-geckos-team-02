@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import List from '../UI/shopping-list';
 
 import { connect } from 'react-redux';
+
+import { withRouter} from 'react-router-dom';
 import { searchByCtg } from '../../actions/searchByCategory';
 
 class Category extends Component {
@@ -70,9 +72,12 @@ class Category extends Component {
         ]
     }
 
-    ctgClick = id => {
+    ctgClick = (id, name) => {
         // console.log('id:',id);
-        this.props.dispatch(searchByCtg(id))
+        this.props.dispatch(searchByCtg(id));
+        this.props.history.push({
+            pathname: `category/${name}`
+        })
     }
 
     render() {
@@ -81,7 +86,7 @@ class Category extends Component {
         return (
             <div className="row">
 
-                <div class="container text-center my-4">
+                <div className="container text-center my-4">
                     <h1>Shop by Category</h1>
                 </div>
                 {
@@ -100,10 +105,5 @@ class Category extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    // console.log(state.itemsByCtg)
-    return {
-        itemsByCtg: state.itemsByCtg.data,
-    }
-}
-export default connect(mapStateToProps)(Category);
+
+export default withRouter(connect()(Category));
