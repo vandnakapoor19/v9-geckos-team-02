@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './header.css'
+import './header.css';
+
+import SearchForm from '../../containers/searchForm';
 
 const Header = () => (
   <div>
@@ -14,14 +16,15 @@ const Header = () => (
           <li><NavLink to="/cart"><i className="fas fa-shopping-cart"></i></NavLink></li>
           <li>
 
-          <form className="form-inline my-2 my-lg-0 mi-auto header-style">
+          <SearchForm />
+          {/* <form className="form-inline my-2 my-lg-0 mi-auto header-style">
           <input 
           className="form-control" 
           type="search" 
           placeholder="search"  
           />
           <button className=" btn mx-4"><i class="fas fa-search"></i></button>
-        </form>
+        </form> */}
           </li>
         </ul>
         
