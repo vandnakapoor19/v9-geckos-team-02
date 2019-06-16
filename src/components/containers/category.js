@@ -76,13 +76,12 @@ class Category extends Component {
         // console.log('id:',id);
         this.props.dispatch(searchByCtg(id));
         this.props.history.push({
-            pathname: `category/${name}`
+            pathname: `${name}/pageNumber=${this.props.curPage}`
         })
     }
 
     render() {
         const { categories } = this.state;
-        // console.log('ctg:',categories);
         return (
             <div className="row">
 
@@ -105,5 +104,10 @@ class Category extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        curPage: state.page.curPage,
+    }
+}
 
-export default withRouter(connect()(Category));
+export default withRouter(connect(mapStateToProps)(Category));

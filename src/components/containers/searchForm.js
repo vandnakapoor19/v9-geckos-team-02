@@ -42,6 +42,7 @@ class SearchForm extends Component {
                     className="form-control"
                     type="search"
                     placeholder="search"
+                    value={input}
                     onChange={this.inputChange}
                 />
                 <button className=" btn mx-4"><i class="fas fa-search"></i></button>
