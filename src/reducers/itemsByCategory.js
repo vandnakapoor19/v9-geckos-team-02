@@ -1,7 +1,8 @@
 const initState = {
     searchByCtgIsFetching: false,
     data: [],
-    err:''
+    err:'',
+    url:''
 }
 
 const itemsByCtg = (state = initState, action) => {
@@ -16,6 +17,7 @@ const itemsByCtg = (state = initState, action) => {
                 ...state,
                 searchByCtgIsFetching: false,
                 data: action.items,
+                url: action.url,
                 err: ''
             }
         case 'SEARCH_CTG_FAIL':

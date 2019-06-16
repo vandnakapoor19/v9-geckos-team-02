@@ -21,7 +21,7 @@ const App = () => (
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/category/:categoryName' component={SearchByCategoty} />
+          <Route exact path='/:categoryName/:page' component={SearchByCategoty} />
           <Route exact path='/:keywords' component={SearchByKeywords} />
           <Route exact path='/product/:id' component={Product} />
           <Route exact path='/cart' component={Cart} />

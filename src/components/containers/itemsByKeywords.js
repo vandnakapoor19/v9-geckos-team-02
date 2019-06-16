@@ -9,7 +9,7 @@ const ItemsByKeywords = props => (
                     <h1>Search Results</h1>
                 </div>
                 {
-                    props.itemsByKeywords.map((item, index) => (
+                    props.itemsByKeywords&&props.itemsByKeywords.map((item, index) => (
                         <List
                             key={index}
                             src={item.galleryURL}
@@ -22,6 +22,7 @@ const ItemsByKeywords = props => (
 );
 
 const mapStateToProps = state => {
+    // console.log(state.itemsByKeywords)
     return {
         itemsByKeywords: state.itemsByKeywords.data,
     }
