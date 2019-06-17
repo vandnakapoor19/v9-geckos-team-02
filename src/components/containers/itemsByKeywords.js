@@ -24,7 +24,7 @@ const ItemsByKeywords = props => (
 const mapStateToProps = state => {
     // console.log(state.itemsByKeywords)
     return {
-        itemsByKeywords: state.itemsByKeywords.data,
+        itemsByKeywords: state.items.data,
     }
 }
 export default connect(mapStateToProps)(ItemsByKeywords);

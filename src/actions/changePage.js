@@ -23,14 +23,18 @@ const nextPageFail = err => {
 
 export const nextPage = url => {
     return (dispatch, getState) => {
-        // console.log('getstate page', getState().page.curPage)
+        
+        let page = getState().items.curPage + 1;
+        console.log('get_url:', `${url}&paginationInput.pageNumber=${page}`)
         dispatch(nextPageStart());
         axios
-            .get(`${url}&paginationInput.pageNumber=${getState().page.curPage+1}`,
-            // { crossdomain: true }
-            { adapter: jsonpAdapter }
+            .get(`${url}&paginationInput.pageNumber=${page}`,
+                // { crossdomain: true }
+                { adapter: jsonpAdapter }
             )
             .then(res => {
+                console.log('res:',res.data.findItemsByCategoryResponse[0].searchResult[0])
+                console.log('after next start')
                 dispatch(nextPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
             })
             .catch(err => dispatch(nextPageFail(err)))
@@ -61,10 +65,11 @@ export const prevPage = (url, curPage) => {
     curPage = curPage > 1 ? curPage - 1 : curPage;
     return (dispatch, getState) => {
         dispatch(prevPageStart());
+        console.log('after prev start')
         axios
             .get(`${url}&paginationInput.pageNumber=${curPage}`,
-            // { crossdomain: true }
-            { adapter: jsonpAdapter }
+                // { crossdomain: true }
+                { adapter: jsonpAdapter }
             )
             .then(res => {
                 dispatch(prevPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
@@ -98,8 +103,8 @@ export const toPage = (url, curPage) => {
         dispatch(toPageStart());
         axios
             .get(`${url}&paginationInput.pageNumber=${curPage}`,
-            // { crossdomain: true }
-            { adapter: jsonpAdapter }
+                // { crossdomain: true }
+                { adapter: jsonpAdapter }
             )
             .then(res => {
                 dispatch(toPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
