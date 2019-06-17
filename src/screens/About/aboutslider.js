@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react';
 import {NavLink} from 'react-router-dom';
 
 export default class aboutslider extends PureComponent {
+    
     render() {
+        console.log('this is aboutslider page')
         return (
             <div className="hotel-image">
                 <div className="container">
