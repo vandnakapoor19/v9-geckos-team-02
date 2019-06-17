@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import itemsByCtg from './itemsByCategory';
-import itemsByKeywords from './itemsByKeywords';
-import page from './page';
+import items from './items';
+// import itemsByKeywords from './itemsByKeywords';
+// import page from './page';
 
 const reducers = combineReducers({
-    itemsByCtg,
-    itemsByKeywords,
-    page
+    items,
+    // itemsByKeywords,
+    // page
   });
   
   export default reducers;

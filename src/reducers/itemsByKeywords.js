@@ -20,7 +20,7 @@ const itemsByKeywords = (state = initState, action) => {
                 url: action.url,
                 err: ''
             }
-        case 'SEARCH_CTG_FAIL':
+        case 'SEARCH_KW_FAIL':
             return {
                 ...state,
                 searchByCtgIsFetching: false,

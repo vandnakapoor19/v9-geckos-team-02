@@ -17,10 +17,12 @@ class Pagination extends Component {
     }
 
     toNextPage= url => {
+        console.log('toNextPage action');
         this.props.dispatch(actions.nextPage(url))
     }
 
     render () {
+        console.log('pagination render');
         console.log('history:',this.props.location);
         const {curPage, url} = this.props;
         return (
@@ -40,8 +42,8 @@ class Pagination extends Component {
 
 const mapStateToProps = state => {
     return {
-        curPage: state.page.curPage,
-        url: state.itemsByCtg ? state.itemsByCtg.url : state.itemsByKeywords.url
+        curPage: state.items.curPage,
+        url: state.items.url 
     }
 }
 
