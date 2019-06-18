@@ -1,15 +1,15 @@
 import React from 'react';
 // import { prevPage } from '../../actions/changePage';
 
-const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage }) => (
+const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) => (
     <nav aria-label="Page navigation example">
         <ul className="pagination">
 
             <li className="page-item">
                 <a
                     className="page-link"
-                    // href={`/pageNumber=${curPage}`} 
-                    href={path}
+                    href="# "
+                    // href={path}
                     aria-label="Previous"
                     onClick={e => {
                         e.preventDefault();
@@ -21,7 +21,7 @@ const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage }) => (
                 </a>
             </li>
 
-            <li className="page-item">
+            {/* <li className="page-item">
                 <a
                     className="page-link"
                     // href="# "
@@ -32,16 +32,29 @@ const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage }) => (
                     }}
                 >{curPage}</a></li>
             <li className="page-item"><a className="page-link" href="# ">2</a></li>
-            <li className="page-item"><a className="page-link" href="# ">3</a></li>
+            <li className="page-item"><a className="page-link" href="# ">3</a></li> */}
+
+            {pages.map((p, index) =>
+                <li className="page-item" key={index}>
+                    <a
+                        className="page-link"
+                        href="# "
+                        // href={path}
+                        onClick={e => {
+                            e.preventDefault();
+                            toPage(url, p)
+                        }}
+                    >{p}</a>
+                </li>)}
 
             <li className="page-item">
                 <a
                     class="page-link"
-                    href={path}
+                    href="# "
                     aria-label="Next"
                     onClick={e => {
                         e.preventDefault();
-                        toNextPage(url)
+                        toNextPage(url, curPage)
                     }}
                 >
                     <span aria-hidden="true">&raquo;</span>
