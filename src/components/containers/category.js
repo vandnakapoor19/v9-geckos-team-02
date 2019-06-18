@@ -77,7 +77,7 @@ class Category extends Component {
         // console.log('id:',id);
         this.props.dispatch(searchByCtg(id));
         this.props.history.push({
-            pathname: `${name}/pageNumber=${this.props.curPage}`
+            pathname: `${name}/pageNumber=1`
         })
     }
 
@@ -106,10 +106,5 @@ class Category extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        curPage: state.items.curPage,
-    }
-}
 
-export default withRouter(connect(mapStateToProps)(Category));
+export default withRouter(connect()(Category));
