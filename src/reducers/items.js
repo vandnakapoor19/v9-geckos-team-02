@@ -1,13 +1,13 @@
 const initState = {
     searchByCtgIsFetching: false,
     searchByKeywordsIsFetching: false,
-    // curPage: 1,
     nextPageIsFetching: false,
     prevPageIsFetching: false,
     toPageIsFetching: false,
     data: [],
     err: '',
-    url: ''
+    url: '',
+    itemDetail: {}
 }
 
 const items = (state = initState, action) => {
@@ -16,7 +16,7 @@ const items = (state = initState, action) => {
             return {
                 ...state,
                 searchByCtgIsFetching: true,
-                // curPage: 1
+                itemDetail: {}
             }
         case 'SEARCH_CTG_SUCCESS':
             return {
@@ -24,7 +24,6 @@ const items = (state = initState, action) => {
                 searchByCtgIsFetching: false,
                 data: action.items,
                 url: action.url,
-                // curPage: 1,
                 err: ''
             }
         case 'SEARCH_CTG_FAIL':
@@ -37,13 +36,12 @@ const items = (state = initState, action) => {
         case 'SEARCH_KW_START':
             return {
                 ...state,
-                // curPage: 1,
+                itemDetail: {},
                 searchByCtgIsFetching: true,
             }
         case 'SEARCH_KW_SUCCESS':
             return {
                 ...state,
-                // curPage: 1,
                 searchByCtgIsFetching: false,
                 data: action.items,
                 url: action.url,
@@ -52,7 +50,6 @@ const items = (state = initState, action) => {
         case 'SEARCH_KW_FAIL':
             return {
                 ...state,
-                // curPage: 1,
                 searchByCtgIsFetching: false,
                 err: action.err
             }
@@ -60,12 +57,12 @@ const items = (state = initState, action) => {
             return {
                 ...state,
                 nextPageIsFetching: true,
+                itemDetail: {},
                 err: ''
             };
         case 'NEXT_PAGE_SUCCESS':
             return {
                 ...state,
-                // curPage: state.curPage + 1,
                 nextPageIsFetching: false,
                 data: action.items,
                 err: ''
@@ -80,6 +77,7 @@ const items = (state = initState, action) => {
             return {
                 ...state,
                 prevPageIsFetching: true,
+                itemDetail: {},
                 err: ''
             };
         case 'PREV_PAGE_SUCCESS':
@@ -100,6 +98,7 @@ const items = (state = initState, action) => {
             return {
                 ...state,
                 toPageIsFetching: true,
+                itemDetail: {},
                 err: ''
             };
         case 'TO_PAGE_SUCCESS':
@@ -114,6 +113,11 @@ const items = (state = initState, action) => {
                 ...state,
                 toPageIsFetching: false,
                 err: action.err
+            };
+            case 'GET_ITEM':
+            return {
+                ...state,
+                itemDetail: state.data.filter(item => item.itemId === action.id)
             };
         default:
             return state;

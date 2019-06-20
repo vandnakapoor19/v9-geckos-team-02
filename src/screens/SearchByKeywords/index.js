@@ -1,10 +1,10 @@
 import React from 'react';
-import ItemsByKeywords from '../../components/containers/itemsByKeywords';
+import SearchResult from '../../components/containers/searchResult';
 import Pagination from '../../components/containers/pagination';
 
 const SearchByKeywords = () => (
   <section >
-    <div className="container"><ItemsByKeywords /></div>
+    <div className="container"><SearchResult /></div>
     <Pagination />
   </section>
 );

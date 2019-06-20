@@ -23,7 +23,7 @@ const App = () => (
           <Route exact path='/' component={Home} />
           <Route exact path='/:categoryName/:page' component={SearchByCategoty} />
           <Route exact path='/search/:keywords' component={SearchByKeywords} />
-          <Route exact path='/product/:id' component={Product} />
+          <Route exact path='/product/:name' component={Product} />
           <Route exact path='/cart' component={Cart} />
           <Route exact path='/checkout' component={Checkout} />
           <Route exact path='/about' component={About} />
