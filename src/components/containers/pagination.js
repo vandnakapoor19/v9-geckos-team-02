@@ -88,7 +88,6 @@ class Pagination extends Component {
 
 const mapStateToProps = state => {
     return {
-        // curPage: state.items.curPage,
         url: state.items.url 
     }
 }
