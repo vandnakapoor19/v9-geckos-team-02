@@ -31,7 +31,7 @@ class SearchResult extends Component  {
 };
 
 const mapStateToProps = state => {
-    console.log(state.items.itemDetail)
+    // console.log(state.items.itemDetail)
     return {
         resultItems: state.items.data,
         isFetching: state.items.searchByCtgIsFetching

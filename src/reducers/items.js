@@ -117,7 +117,7 @@ const items = (state = initState, action) => {
             case 'GET_ITEM':
             return {
                 ...state,
-                itemDetail: state.data.filter(item => item.itemId === action.id)
+                itemDetail: state.data.filter(item => item.itemId === action.id),
             };
         default:
             return state;

@@ -21,11 +21,10 @@ const nextPageFail = err => {
     }
 }
 
-export const nextPage = url => {
+export const nextPage = (url, page) => {
+    page += 1;
     return (dispatch, getState) => {
-        
-        let page = getState().items.curPage + 1;
-        console.log('get_url:', `${url}&paginationInput.pageNumber=${page}`)
+        // console.log('get_url:', `${url}&paginationInput.pageNumber=${page}`)
         dispatch(nextPageStart());
         axios
             .get(`${url}&paginationInput.pageNumber=${page}`,
@@ -33,9 +32,12 @@ export const nextPage = url => {
                 { adapter: jsonpAdapter }
             )
             .then(res => {
-                console.log('res:',res.data.findItemsByCategoryResponse[0].searchResult[0])
-                console.log('after next start')
-                dispatch(nextPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
+                // console.log('res:', res.data.findItemsByKeywordsResponse)
+                let data = res.data.findItemsByCategoryResponse ?
+                    res.data.findItemsByCategoryResponse[0].searchResult[0].item :
+                    res.data.findItemsByKeywordsResponse[0].searchResult[0].item;
+                // console.log('res.data:', data);
+                dispatch(nextPageSuccess(data))
             })
             .catch(err => dispatch(nextPageFail(err)))
     }
@@ -65,14 +67,17 @@ export const prevPage = (url, curPage) => {
     curPage = curPage > 1 ? curPage - 1 : curPage;
     return (dispatch, getState) => {
         dispatch(prevPageStart());
-        console.log('after prev start')
+        // console.log('prevpage:', curPage)
         axios
             .get(`${url}&paginationInput.pageNumber=${curPage}`,
                 // { crossdomain: true }
                 { adapter: jsonpAdapter }
             )
             .then(res => {
-                dispatch(prevPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
+                let data = res.data.findItemsByCategoryResponse ?
+                    res.data.findItemsByCategoryResponse[0].searchResult[0].item :
+                    res.data.findItemsByKeywordsResponse[0].searchResult[0].item
+                dispatch(prevPageSuccess(data))
             })
             .catch(err => dispatch(prevPageFail(err)))
     }
@@ -101,13 +106,17 @@ const toPageFail = err => {
 export const toPage = (url, curPage) => {
     return (dispatch, getState) => {
         dispatch(toPageStart());
+        // console.log('toPage_url:', `${url}&paginationInput.pageNumber=${curPage}`)
         axios
             .get(`${url}&paginationInput.pageNumber=${curPage}`,
                 // { crossdomain: true }
                 { adapter: jsonpAdapter }
             )
             .then(res => {
-                dispatch(toPageSuccess(res.data.findItemsByCategoryResponse[0].searchResult[0].item))
+                let data = res.data.findItemsByCategoryResponse ?
+                    res.data.findItemsByCategoryResponse[0].searchResult[0].item :
+                    res.data.findItemsByKeywordsResponse[0].searchResult[0].item
+                dispatch(toPageSuccess(data))
             })
             .catch(err => dispatch(toPageFail(err)))
     }
