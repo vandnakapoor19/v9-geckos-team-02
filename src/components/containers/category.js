@@ -26,47 +26,47 @@ class Category extends Component {
                 galleryURL: "https://www.childrenscolorado.org/globalassets/parenting-advice/articles/safe-sleep-baby.jpg?width=400&height=300"
             },
             {
-                categoryId: 267,
+                itemId: 267,
                 title: "Books, Comics & Magazines",
                 galleryURL: "https://savacoolandsons.blob.core.windows.net/photos/30339/30339-v6l4-m.jpeg"
             },
             {
-                categoryId: 625,
+                itemId: 625,
                 title: "Cameras & Photography",
                 galleryURL: "https://www.cameralabs.com/wp-content/uploads/gk_nsp_cache/hero_NikonZ24-70f2-8S_55136-gk_nsp-3_article.jpg"
             },
             {
-                categoryId: 9800,
+                itemId: 9800,
                 title: "Cars, Motorcycles & Vehicles",
                 galleryURL: "https://www.picclickimg.com/d/l400/pict/303181812313_/Fiat-500F-Round-Speedo.jpg"
             },
             {
-                categoryId: 11450,
+                itemId: 11450,
                 title: "Clothes, Shoes & Accessories",
                 galleryURL: "https://www.nextdirect.com/nxtcms/resource/image/814562/landscape_ratio4x3/400/300/72cb8176ac8618b2ac1274c07d17a7/QK/dt-newin.jpg"
             },
             {
-                categoryId: 58058,
+                itemId: 58058,
                 title: "Computers,Tablets & Networking",
                 galleryURL: "http://www.theowl.com.au/source/ckfinder/files/New%20Computers.jpg"
             },
             {
-                categoryId: 11232,
+                itemId: 11232,
                 title: "DVDs, Films & TV",
                 galleryURL: "https://www.umhs-sk.org/blog/wp-content/uploads/2013/12/movie-popcorn.jpg"
             },
             {
-                categoryId: 281,
+                itemId: 281,
                 title: "Jewellery & Watches",
                 galleryURL: "https://stockport-bullion.co.uk/wp-content/uploads/2018/04/Jewellery-400x300.jpg"
             },
             {
-                categoryId: 1281,
+                itemId: 1281,
                 title: "Pet Supplies",
                 galleryURL: "https://i.pinimg.com/originals/17/28/22/1728228e918dc9bf5d8c4c92f7d58db9.jpg"
             },
             {
-                categoryId: 1249,
+                itemId: 1249,
                 title: "Video Games & Consoles",
                 galleryURL: "https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/gameconsoles/Microsoft_Xbox_One_X/Microsoft_Xbox_One_X_L_1.jpg"
             },
