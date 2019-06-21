@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactImageMagnify from "react-image-magnify"
-import watchImg from '../../components/img/showcase.jpg';
+import watchImg from '../../img/showcase.jpg';
 
 export default class productimage extends Component {
     render() {

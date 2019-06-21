@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductImage from "./productimage";
-import ProductDetail from "./productdetail";
-import Cartdetails from "./cartdetail";
+import ProductImage from "../../components/containers/product/productimage";
+import ProductDetail from "../../components/containers/product/detail";
+import Cartdetails from "../../components/containers/product/cartdetail";
 
 const Product = () => (
       <section className="container">

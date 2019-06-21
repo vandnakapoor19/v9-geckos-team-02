@@ -107,10 +107,10 @@ color: #333;
   display: flex;
 }
 .product-details-image{
-  flex: 3;
+  flex-grow: 1;
 }
 .product-details{
-  flex: 1;
+  flex-grow: 4;
 }
 .top {
   height: 50px;
