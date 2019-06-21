@@ -20,9 +20,7 @@ class SearchForm extends Component {
 
     searchItemsSubmit = keywords => {
         this.props.dispatch(searchByKeywords(keywords));
-        this.props.history.push({
-            pathname: keywords
-        });
+        this.props.history.replace( `/search/${keywords}/pageNumber=1`);
         this.setState({
             input: ''
         })

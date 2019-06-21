@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Pagebar from '../UI/pagebar';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions/changePage';
 
-import { withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Pagination extends Component {
     state = {
@@ -20,17 +20,17 @@ class Pagination extends Component {
         // use it to solve url async problem
         // getPath must run after setState
         if (prevState.curPage !== this.state.curPage) {
-           this.props.history.push({
+            this.props.history.push({
                 pathname: this.getPath()
             })
         }
-      }
+    }
 
 
     toPrevPage = (url, page) => {
-        const {pages} = this.state;
+        const { pages } = this.state;
         if (page === 1) return;
-        if (page%5 === 1) {
+        if (page % 5 === 1) {
             this.setState({
                 pages: pages.map(p => p - 5)
             })
@@ -42,37 +42,38 @@ class Pagination extends Component {
     }
 
     toPage = (url, page) => {
-        console.log('page:',page)
+        // console.log('page:', page)
+        // console.log('url', url)
         this.setState({
-            curPage: page 
+            curPage: page
         })
         this.props.dispatch(actions.toPage(url, page))
 
     }
 
-    toNextPage= (url, page) => {
-        const {pages} = this.state;
-                if (page%5 === 0) {
-            this.setState ({
+    toNextPage = (url, page) => {
+        const { pages } = this.state;
+        if (page % 5 === 0) {
+            this.setState({
                 pages: pages.map(p => p + 5)
             })
         }
         this.setState({
             curPage: page + 1
         })
-        this.props.dispatch(actions.nextPage(url));
+        this.props.dispatch(actions.nextPage(url, page));
     }
 
-    
 
-    render () {
-        const {url} = this.props;
-        const {curPage, pages} = this.state;
-        // console.log('location:',this.getPath());
-        console.log('page:', curPage)
+
+    render() {
+        const { url } = this.props;
+        const { curPage, pages } = this.state;
+        // console.log('location:', this.getPath());
+        // console.log('page:', curPage)
         return (
             <div>
-                <Pagebar 
+                <Pagebar
                     curPage={curPage}
                     pages={pages}
                     toPrevPage={this.toPrevPage}
@@ -88,7 +89,7 @@ class Pagination extends Component {
 
 const mapStateToProps = state => {
     return {
-        url: state.items.url 
+        url: state.items.url
     }
 }
 

@@ -76,7 +76,7 @@ class Category extends Component {
     ctgClick = (id, title) => {
         this.props.dispatch(searchByCtg(id));
         this.props.history.push({
-            pathname: `${title}/pageNumber=1`
+            pathname: `search/${title}/pageNumber=1`
         })
     }
 
