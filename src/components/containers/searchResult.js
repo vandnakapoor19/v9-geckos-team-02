@@ -12,7 +12,7 @@ class SearchResult extends Component  {
     itemClick = (id, title) => {
         this.props.dispatch(getItem(id));
         this.props.history.push({
-            pathname: `/product/${title}`
+            pathname: `/product/${id}`
         });
     }
 

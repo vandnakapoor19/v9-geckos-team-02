@@ -30,14 +30,12 @@
     padding:2px;
     padding-left:15px;
     padding-right:15px;
-    background:#f8f9f9
+    padding-bottom: 5px;
+    /* background:#f8f9f9 */
 }
 
-
-.title-attr{
-    margin-top:0;
-    margin-bottom:0;
-    color:black;
+.btn-success {
+    width: 100%
 }
 
 .quality {
