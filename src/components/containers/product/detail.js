@@ -38,7 +38,7 @@ const ProductDetail = props => {
                     </select>
                 </dd>
             </dl> */}
-             
+             <div className="section">
                 <h6 className="title-attr"><small>Quality</small></h6>
                 {/* <div className="quality">
                 <span>Quality: </span> */}
@@ -47,10 +47,11 @@ const ProductDetail = props => {
                     <input value="1" />
                     <button className="btn-plus">-</button>
                 </div>
+                </div>
 
-            <div className="col-sm-6" >
+            
                 <button className="btn btn-success">Add to Cart</button>
-            </div>  
+             
           
 
             <div className="section" >
@@ -69,7 +70,7 @@ const ProductDetail = props => {
 }
 
 const mapStateToProps = state => {
-    console.log(state.items.itemDetail && state.items.itemDetail[0].title)
+    console.log(state.items.itemDetail)
     return {
         details: state.items.itemDetail[0]
     }
