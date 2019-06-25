@@ -1,23 +1,21 @@
 import React from 'react';
 import ProductImage from "../../components/containers/product/productimage";
 import ProductDetail from "../../components/containers/product/detail";
-import Cartdetails from "../../components/containers/product/cartdetail";
+
+import "./product.css";
 
 const Product = () => (
-      <section className="container">
-        <h4><span className="text-main">Category  Name</span> </h4>
-        <div className ="product-container">  
-          <div className="product-details-image">
+      <section className="container my-4">
+        {/* <h4><span className="text-main">Category  Name</span> </h4> */}
+        <div className ="row justify-content-center align-items-center">  
+          <div className="col-5">
             <ProductImage/>
           </div>
         
-          <div className="product-details">
+          <div className="col-7">
             <ProductDetail/>
           </div>
-          
-          <div className="product-details">
-            <Cartdetails/>
-          </div>
+
         </div>
        
         

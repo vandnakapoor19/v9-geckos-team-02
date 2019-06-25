@@ -10,11 +10,7 @@ class Category extends Component {
     state = {
         pageTitle: "Shop by Category",
         categories: [
-            {
-                itemId: 20081,
-                title: "Antiques",
-                galleryURL: "https://res.cloudinary.com/made-com/image/upload/a_auto,b_transparent,c_pad,d_made.svg,dpr_1.0,f_auto,h_300,q_auto:best,w_400/v4/wysiwyg/New_Category_Page_Refresh/Furniture/1600x1200_FURNITURE_Template_0000s_0003_Bendt.jpg"
-            },
+            
             {
                 itemId: 550,
                 title: "Art",
@@ -35,11 +31,7 @@ class Category extends Component {
                 title: "Cameras & Photography",
                 galleryURL: "https://www.cameralabs.com/wp-content/uploads/gk_nsp_cache/hero_NikonZ24-70f2-8S_55136-gk_nsp-3_article.jpg"
             },
-            {
-                itemId: 9800,
-                title: "Cars, Motorcycles & Vehicles",
-                galleryURL: "https://www.picclickimg.com/d/l400/pict/303181812313_/Fiat-500F-Round-Speedo.jpg"
-            },
+           
             {
                 itemId: 11450,
                 title: "Clothes, Shoes & Accessories",
@@ -55,6 +47,16 @@ class Category extends Component {
                 title: "DVDs, Films & TV",
                 galleryURL: "https://www.umhs-sk.org/blog/wp-content/uploads/2013/12/movie-popcorn.jpg"
             },
+            {
+                itemId: 159912,
+                title: "Garden & Patio",
+                galleryURL: "https://trisupplyhome.com/wp-content/uploads/2018/03/Breezesta-Squirrel-400x300.jpg"
+            },
+            {
+                itemId: 11700,
+                title: "Home, Furniture & DIY",
+                galleryURL: "https://res.cloudinary.com/made-com/image/upload/a_auto,b_transparent,c_pad,d_made.svg,dpr_1.0,f_auto,h_300,q_auto:best,w_400/v4/wysiwyg/New_Category_Page_Refresh/Furniture/1600x1200_FURNITURE_Template_0000s_0003_Bendt.jpg"
+            }, 
             {
                 itemId: 281,
                 title: "Jewellery & Watches",
