@@ -1,0 +1,9 @@
+.product-container{
+    display: flex;
+  }
+  .product-details-image{
+    flex-grow: 1;
+  }
+  .product-details{
+    flex-grow: 4;
+  }

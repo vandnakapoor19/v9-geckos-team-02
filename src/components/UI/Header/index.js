@@ -17,14 +17,7 @@ const Header = () => (
           <li>
 
           <SearchForm />
-          {/* <form className="form-inline my-2 my-lg-0 mi-auto header-style">
-          <input 
-          className="form-control" 
-          type="search" 
-          placeholder="search"  
-          />
-          <button className=" btn mx-4"><i class="fas fa-search"></i></button>
-        </form> */}
+
           </li>
         </ul>
         

@@ -1,29 +1,41 @@
-import React, { Component } from 'react';
-import ReactImageMagnify from "react-image-magnify"
-import watchImg from '../../img/showcase.jpg';
+import React from 'react';
+import ReactImageMagnify from "react-image-magnify";
+import { connect } from 'react-redux';
 
-export default class productimage extends Component {
-    render() {
-        return (
-            <div className="fluid">
-                <div className="fluid__image-container">
-                    <ReactImageMagnify {...{
-                        smallImage: {
-                            alt: 'Wristwatch by Ted Baker London',
-                            src: watchImg,
-                            width: 550,
-                            height: 450
-                        },
-                        largeImage: {
-                            src: watchImg,
-                            width: 1200,
-                            height: 1800
-                        },
-                        isHintEnabled: true
-                    }} />
-                </div>
-           
+// import watchImg from '../../img/showcase.jpg';
+
+const ProductImage = props => {
+
+    return (
+        <div className="fluid">
+        <h4><span className="text-main">{props.title}</span> </h4>
+            <div className="fluid__image-container">
+                <ReactImageMagnify {...{
+                    smallImage: {
+                        alt: props.title,
+                        src: props.watchImg,
+                        // width: 550,
+                        // height: 450
+                    },
+                    largeImage: {
+                        src: props.watchImg,
+                        width: 550,
+                        height: 450
+                    },
+                    isHintEnabled: true
+                }} />
             </div>
-        )
+
+        </div>
+    )
+}
+
+
+const mapStateToProps = state => {
+    return {
+        watchImg: state.items.itemDetail[0].galleryURL,
+        titile: state.items.itemDetail[0].title
     }
 }
+
+export default connect(mapStateToProps)(ProductImage)
