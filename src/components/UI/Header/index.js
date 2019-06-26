@@ -4,7 +4,7 @@ import './header.css';
 
 import SearchForm from '../../containers/searchForm';
 
-const Header = () => (
+const Header = ({total}) => (
   <div>
     <nav id="navbar">
       <div className="container">
@@ -13,7 +13,7 @@ const Header = () => (
           <li><NavLink  className="current" to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
-          <li><NavLink to="/cart"><i className="fas fa-shopping-cart"></i></NavLink></li>
+          <li><NavLink to="/cart"><i className="fas fa-shopping-cart"></i>({total})</NavLink></li>
           <li>
 
           <SearchForm />

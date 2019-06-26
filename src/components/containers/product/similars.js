@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 
-export default class cartdetail extends PureComponent {
+export default class Similars extends PureComponent {
     render() {
         return (
             <div>
-                cart
+                Similars
             </div>
         )
     }
