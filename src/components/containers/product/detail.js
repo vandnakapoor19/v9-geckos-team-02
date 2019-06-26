@@ -47,7 +47,7 @@ class ProductDetail extends Component {
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
                         <span className="fa fa-star checked"></span>
-                        <span className="fa fa-star"></span>
+                        <span className="fa fa-star checked"></span>
                         <span className="fa fa-star"></span>
                     </div>
                     <span class="review-no">41 reviews</span>

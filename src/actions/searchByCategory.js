@@ -25,7 +25,6 @@ const searchCtgFail = err => {
 
 export const searchByCtg = id => {
     let URL = `http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByCategory&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=YuShi-Ecommerc-PRD-52d9a4cd1-ab27ddce&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&categoryId=${id}&paginationInput.entriesPerPage=24`;
-    console.log('url:', URL)
     return (dispatch, getState) => {
         dispatch(searchCtgStart());
         axios
