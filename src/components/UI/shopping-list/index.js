@@ -7,7 +7,7 @@ const List = ({ click, pageTitle, resultItems }) => (
         <div className="row">
             {resultItems && resultItems.map((item, index) => <div
                 key={index}
-                className="col-md-4 col-lg-3 col-sm-6 my-3 d-flex align-items-stretch"
+                className="col-md-3 col-lg-3 col-sm-6 my-3 d-flex align-items-stretch"
                 onClick={() => click(item.itemId, item.title)}
             >
                 <figure className="card card-sm card-product ">
@@ -15,8 +15,11 @@ const List = ({ click, pageTitle, resultItems }) => (
                     {/* <div className="mask rgba-white-slight"></div> */}
 
                     <figcaption className="info-wrap text-center card-body ">
-                        {pageTitle === "Shop by Category" && <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>}
-                        {pageTitle === "Search Result" && <p className="card-text">{item.title}</p>}
+                        {/* {pageTitle === "Shop by Category" && <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>}
+                        {pageTitle === "Search Result" && <p className="card-text">{item.title}</p>} */}
+                        {pageTitle === "Shop by Category" 
+                        ? <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>
+                        : <p className="card-text">{item.title}</p>}
                     </figcaption>
                 </figure>
             </div>
