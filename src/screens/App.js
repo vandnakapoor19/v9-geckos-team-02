@@ -12,7 +12,7 @@ import About from './About';
 import Contact from './Contact';
 
 import Footer from '../components/UI/Footer';
-import Header from '../components/UI/Header';
+import Header from '../components/containers/Header';
 
 const App = () => (
   <BrowserRouter>
