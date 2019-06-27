@@ -17,9 +17,12 @@ const List = ({ click, pageTitle, resultItems }) => (
                     <figcaption className="info-wrap text-center card-body ">
                         {/* {pageTitle === "Shop by Category" && <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>}
                         {pageTitle === "Search Result" && <p className="card-text">{item.title}</p>} */}
-                        {pageTitle === "Shop by Category" 
-                        ? <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>
-                        : <p className="card-text">{item.title}</p>}
+                        {pageTitle === "Shop by Category"
+                            ? <h1 className="title text-truncate text-secondary"><strong>{item.title}</strong></h1>
+                            : <p className="card-text item-title">{item.title}</p>}
+                        <div className="price">
+                            {item.sellingStatus&&"USD "+item.sellingStatus[0].currentPrice[0].__value__}
+                        </div>
                     </figcaption>
                 </figure>
             </div>

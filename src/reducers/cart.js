@@ -1,7 +1,4 @@
-// const initState = {
-//     items: [],
-//     total: 0
-// }
+
 const helper = (arr, obj) => {
     if (arr.filter(el => el.id === obj.id).length !== 0) {
         return arr.map(el =>

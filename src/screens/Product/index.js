@@ -7,8 +7,7 @@ import "./product.css";
 
 const Product = () => (
       <section className="container my-4">
-        {/* <h4><span className="text-main">Category  Name</span> </h4> */}
-        <div className ="row justify-content-center align-items-center mx-4">  
+        <div className ="row justify-content-center align-items-center mx-2">  
           <div className="col-5">
             <ProductImage/>
           </div>
@@ -17,7 +16,7 @@ const Product = () => (
             <ProductDetail/>
           </div>
 
-          <div className ="row justify-content-center align-items-center mx-4">
+          <div className ="row justify-content-center align-items-center mx-2">
             <Similars />
           </div>
         </div>

@@ -31,7 +31,6 @@ class Similars extends Component {
 
     render() {
         const { items, itemId } = this.props;
-        console.log(this.helper(items, itemId));
         return (
             <div>
                 <List
