@@ -1,10 +1,11 @@
 
 const helper = (arr, obj) => {
-    if (arr.filter(el => el.id === obj.id).length !== 0) {
-        return arr.map(el =>
-            (el.id === obj.id)
-                ? { ...el, quality: el.quality + obj.quality }
-                : el
+    if (arr.filter(el => el.id[0] === obj.id[0]).length !== 0) {
+        return arr.map(el => {
+            if (el.id[0] === obj.id[0]) {
+                return { ...el, quality: el.quality + obj.quality }
+            } else return el;
+        }
         )
     } else {
         return [...arr, obj]
