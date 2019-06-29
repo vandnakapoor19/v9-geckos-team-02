@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../../../actions/addToCart';
+import AddSuccessToCart from '../addSuccessToCart';
 
 import "./detail.css";
 
 class ProductDetail extends Component {
     state = {
-        quality: 1
+        quality: 1,
+        showModal: false
     }
 
     increaseQuality = () => {
@@ -23,6 +25,14 @@ class ProductDetail extends Component {
         })
     }
 
+    toggleModal = () => {
+        console.log('toggle1:', this.state.showModal)
+        this.setState({
+            showModal: !this.state.showModal
+        })
+        console.log('toggle2:', this.state.showModal)
+    }
+
     addItemtoCart = quality => {
         const info = {
             id: this.props.details.itemId,
@@ -30,11 +40,12 @@ class ProductDetail extends Component {
             title: this.props.details.title,
             price: this.props.details.sellingStatus[0].currentPrice[0].__value__
         }
-        this.props.dispatch(addToCart(info, quality))
+        this.props.dispatch(addToCart(info, quality));
+        this.toggleModal();
     }
 
     render() {
-        const { quality } = this.state;
+        const { quality, showModal } = this.state;
         const { title, condition, sellingStatus } = this.props.details;
         return (
             this.props.details &&
@@ -75,9 +86,19 @@ class ProductDetail extends Component {
 
 
                 <button
+                    type="button"
                     className="btn btn-success"
+                    data-toggle="modal"
+                    data-target="#modalCart"
+                    // data-dismiss="modal"
                     onClick={() => this.addItemtoCart(quality)}
                 >Add to Cart</button>
+                <AddSuccessToCart
+                    details={this.props.details}
+                    quality={quality}
+                    showModal={showModal}
+                    toggleModal={this.toggleModal}
+                />
 
 
 
