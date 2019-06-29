@@ -14,7 +14,27 @@ const helper = (arr, obj) => {
 const cart = (state = [], action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
-            return [...helper(state, action.data)]
+            return [...helper(state, action.data)];
+        case 'REDUCE_QUALITY':
+            return state.map(item => {
+                if (item.id === action.id) {
+                    return {
+                        ...item, 
+                        quality: item.quality > 1 ? item.quality - 1 : item.quality
+                    }
+                } else return item;
+            })
+        case 'ADD_QUALITY':
+            return state.map(item => {
+                if (item.id === action.id) {
+                    return {
+                        ...item, 
+                        quality: item.quality + 1
+                    }
+                } else return item;
+            })
+        case 'DELETE_ITEM':
+            return state.filter(item => item.id !== action.id)
         default:
             return state;
     }
