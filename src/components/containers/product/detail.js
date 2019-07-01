@@ -26,11 +26,9 @@ class ProductDetail extends Component {
     }
 
     toggleModal = () => {
-        console.log('toggle1:', this.state.showModal)
         this.setState({
             showModal: !this.state.showModal
         })
-        console.log('toggle2:', this.state.showModal)
     }
 
     addItemtoCart = quality => {
@@ -90,7 +88,6 @@ class ProductDetail extends Component {
                     className="btn btn-success"
                     data-toggle="modal"
                     data-target="#modalCart"
-                    // data-dismiss="modal"
                     onClick={() => this.addItemtoCart(quality)}
                 >Add to Cart</button>
                 <AddSuccessToCart

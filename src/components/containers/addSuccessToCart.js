@@ -6,12 +6,10 @@ class AddSuccessToCart extends Component {
 
     viewCart = async () => {
         await this.props.toggleModal();
-        console.log(this.props.showModal)
         this.props.history.push('/cart')
 
     }
     render() {
-        // console.log(this.props.showModal)
         const { details, quality, showModal, toggleModal } = this.props;
         return (
             < ModalCart
