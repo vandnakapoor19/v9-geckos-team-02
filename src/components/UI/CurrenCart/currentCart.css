@@ -1,0 +1,12 @@
+.imgSize {
+    height: 110px;
+    width: 80px;
+}
+
+button.btn-checkout {
+    background-color: #ff9022;
+    padding: 2%;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+}

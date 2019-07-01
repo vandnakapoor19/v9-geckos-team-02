@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import itemsByCtg from './itemsByCategory'
+import items from './items';
+import cart from './cart';
 
 const reducers = combineReducers({
-    itemsByCtg
-  });
-  
-  export default reducers;
-  
+  items,
+  cart
+});
+
+export default reducers;

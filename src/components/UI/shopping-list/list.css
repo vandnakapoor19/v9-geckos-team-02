@@ -1,3 +1,44 @@
-/* .box {
-    margin: 10px;
-} */
+.price {
+    color:#333;
+    font-size: 17px;
+    /* font-family:Montserrat,sans-serif; */
+    font-weight: 700;
+    letter-spacing: .6px;
+    margin-bottom: 8px;
+    text-align: center;
+    transition: all .3s
+}
+
+.item-title {
+    font-size:10px;
+    font-weight:400;
+    letter-spacing:.5px;
+    text-transform:capitalize;
+    margin:0 0 10px;
+    transition:all .3s ease 0s;
+    color: red
+}
+
+ @media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}

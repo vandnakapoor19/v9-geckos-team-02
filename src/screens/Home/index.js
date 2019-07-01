@@ -6,7 +6,6 @@ const Home = () => (
       <section >       
         <HomeSlider/>
         <div className="container"><Category /></div>
-        
       </section>
   );
 
