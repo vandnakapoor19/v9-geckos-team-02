@@ -1,13 +1,23 @@
 import React from 'react';
 import CurrentCartContainer from '../../components/containers/CurrentCartContainer';
+
+import CartFlow from '../../components/containers/cartFlow';
 import CurrentOrderSummary from '../../components/containers/CurrentOrderSummary';
+
 
 const Cart = () => (
   <div className="container">
+
+    <div className="container m-5">
+      <br />
+      <CartFlow />
+      <br />
+    </div>
+
     <div className="row">
       <br />
 
-      <div class="col-md-8 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+      <div className="col-md-8 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
         <CurrentCartContainer />
       </div>
 
@@ -20,7 +30,7 @@ const Cart = () => (
         </div>
       </div>
 
-      
+
 
     </div>
   </div>
