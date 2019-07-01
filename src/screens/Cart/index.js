@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentCartContainer from '../../components/containers/CurrentCartContainer';
+import CurrentOrderSummary from '../../components/containers/CurrentOrderSummary';
 
 const Cart = () => (
   <div className="container">
@@ -15,7 +16,7 @@ const Cart = () => (
           <div className="panel-heading text-center">
             <h4>Order Summary</h4>
           </div>
-          <div className="panel-body"></div>
+          <div className="panel-body"><CurrentOrderSummary /></div>
         </div>
       </div>
 
