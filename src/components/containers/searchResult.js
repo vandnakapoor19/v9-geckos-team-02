@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
 
 class SearchResult extends Component  {
 
-    itemClick = (id, title) => {
+    itemClick = id => {
         this.props.dispatch(getItem(id));
         this.props.history.push({
             pathname: `/product/${id}`

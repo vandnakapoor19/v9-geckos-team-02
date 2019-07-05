@@ -9,7 +9,6 @@ const Cart = () => (
   <div className="container">
 
     <div className="container m-5">
-      <br />
       <CartFlow />
       <br />
     </div>

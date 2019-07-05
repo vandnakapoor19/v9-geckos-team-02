@@ -24,7 +24,7 @@ const cartSummary = ({ items }) => (
                 </div>
             </div>
                 <hr />
-            <button className="btn-checkout">Checkout</button>
+            <button className="btn-checkout">Place Order</button>
             </div>
         </div>
  
