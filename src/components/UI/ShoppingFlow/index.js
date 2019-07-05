@@ -6,14 +6,16 @@ const Flow = ({isCartActive,isCOActive,isTYActive}) => (
         <div className="col-xs-12 col-sm-4">
             <div className={`step ${isCartActive}`}>
                 Cart
-                <div className="hidden-xs caret right"></div>
+                <div className="d-none d-sm-block caret right"></div>
+                <div className="d-block d-sm-none caret bottom"></div>
             </div>
         </div>
 
         <div className="col-xs-12 col-sm-4">
             <div className={`step ${isCOActive}`}>
                 Checkout
-                <div className="hidden-xs caret right"></div>
+                <div className="d-none d-sm-block caret right"></div>
+                <div className="d-block d-sm-none caret bottom"></div>
             </div>
         </div>
 

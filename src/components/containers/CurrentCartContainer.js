@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CurrentCart from '../UI/CurrenCart';
 
 import {connect} from 'react-redux';
-import * as actions from '../../actions/addToCart'
+import * as actions from '../../actions/addToCart';
 
 class CurrentCartContainer extends Component{
 
