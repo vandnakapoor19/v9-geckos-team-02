@@ -1,25 +1,25 @@
 import React from 'react';
 
-const CreditCartForm = () => (
+const CreditCartForm = ({ inputChange }) => (
     <div className='panel panel-info'>
         <div className='panel-heading'><span><i className="fas fa-lock mx-2"></i></span>Secure Payment</div>
 
         <div className='panel-body my-3'>
 
-        <div className="form-group">
+            <div className="form-group is-invalid">
                 <label for="name-oncard">Name on card</label>
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" name='name_on_card' onChange={inputChange} />
             </div>
 
             <div className="form-group">
                 <label for="card-number">Card Number</label>
-                <input type="number" className="form-control" />
+                <input type="number" className="form-control" name='card_number' onChange={inputChange} />
             </div>
 
             <div className="form-row">
                 <div className="form-group col-md-6">
                     <label for="card-type">Card Type</label>
-                    <select className="form-control">
+                    <select className="form-control" name='card_type' onChange={inputChange}>
                         <option selected>Visa</option>
                         <option>Visa</option>
                         <option>MasterCard</option>
@@ -30,17 +30,17 @@ const CreditCartForm = () => (
 
                 <div className="form-group col-md-6">
                     <label>Card CVV</label>
-                    <input type="number" className="form-control" />
+                    <input type="number" className="form-control" name='card_CVV' onChange={inputChange} />
                 </div>
             </div>
- 
-                <div className="form-group ">
-                    <div>
-                        <strong>Expiration Date</strong>
-                    </div>
-                    <div className="form-row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <select class="form-control" name="">
+
+            <div className="form-group ">
+                <div>
+                    <strong>Expiration Date</strong>
+                </div>
+                <div className="form-row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control" name='exp_month' onChange={inputChange}>
                             <option value="">Month</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
@@ -57,12 +57,12 @@ const CreditCartForm = () => (
                         </select>
                     </div>
 
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <input type="number" className="form-control" placeholder="Year" />
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="number" className="form-control" placeholder="Year" name='exp_year' onChange={inputChange} />
                     </div>
                 </div>
             </div>
-       
+
         </div>
     </div>
 )

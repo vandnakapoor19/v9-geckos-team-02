@@ -11,7 +11,6 @@ const currentOrderSummary = props => (
 )
 //this.props.dispatch();
 const mapStateToProp=state=>{
-    console.log(state.cart);
     return {
         items: state.cart
     }
