@@ -17,6 +17,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='first_name' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.first_name.msg}</span>
                 </div>
 
                 <div className='form-group col-md-6'>
@@ -26,6 +27,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='last_name' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.last_name.msg}</span>
                 </div>
             </div>
 
@@ -37,6 +39,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='phone' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.phone.msg}</span>
                 </div>
 
                 <div className='form-group col-md-6'>
@@ -46,6 +49,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='email' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.email.msg}</span>
                 </div>
             </div>
 
@@ -56,6 +60,7 @@ const AddressForm = ({ inputChange, validation }) => (
                     name='address' 
                     onChange={inputChange} 
                 />
+                <span className="invalid-feedback">{validation.address.msg}</span>
             </div>
 
             <div className="form-row">
@@ -66,6 +71,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='city' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.city.msg}</span>
                 </div>
                 <div className='form-group col-md-4'>
                     <label for="inputState">State</label>
@@ -89,6 +95,7 @@ const AddressForm = ({ inputChange, validation }) => (
                         name='zip' 
                         onChange={inputChange} 
                     />
+                    <span className="invalid-feedback">{validation.zip.msg}</span>
                 </div>
             </div>
 
