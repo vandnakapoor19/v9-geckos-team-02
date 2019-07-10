@@ -1,5 +1,9 @@
 .step {
-    background:#eee;font-size:1em;color:#ccc;padding:15px;font-size:1.25em;
+    background:#eee;
+    font-size:1em;
+    color:#ccc;
+    padding:15px;
+    font-size:1.25em;
 }
 .step.active {
     color:#3C763D;
@@ -17,16 +21,29 @@
     border-left:30px solid;}
 
 .step .caret.bottom {
-    bottom:-15px;left:35%;border-top:15px solid;border-right:50px solid transparent;border-left:50px solid transparent;
+    bottom:-15px;
+    left:35%;
+    border-top:15px solid;
+    border-right:50px solid transparent;
+    border-left:50px solid transparent;
 }
 @media(max-width:991px) {
-  .step {text-align:center;margin-top:20px;height:80px;}
-  .step .caret.right {top:20px;border-top:40px solid transparent;border-bottom:40px solid transparent;}
+  .step {
+    text-align:center;
+    margin-top:20px;
+    height:80px;
+  }
+  .step .caret.right {
+    top:20px;
+    border-top:40px solid transparent;
+    border-bottom:40px solid transparent;
+  }
 }
 
 @media(max-width:767px) {
-  .step {height:auto;}
-  .ssl-container {float:none;margin:0 auto;width:220px;}
+  .step .caret {
+    height:auto;
+  }
 }
 
 @media(min-width:768px) {

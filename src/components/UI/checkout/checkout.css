@@ -1,0 +1,41 @@
+.panel-heading {
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    font-weight: bold;
+}
+.panel {
+    border-radius: 1px;
+}
+/* 
+.input-sm .form-group-sm .form-control{
+    border-radius: 1px;
+} */
+
+/* .panel-info {
+    border-color: #999;
+} */
+
+.panel-heading {
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+.panel-info > .panel-heading {
+    color: #eee;
+    border-color: #999;
+}
+.panel-info > .panel-heading {
+    background-image: linear-gradient(to bottom, #555 0px, #888 100%);
+}
+
+@media only screen and (max-width: 989px){
+    .span1{
+        margin-bottom: 15px;
+        clear:both;
+    }
+}
+
+.form-control {
+    border-radius: 1px;
+}
+
+

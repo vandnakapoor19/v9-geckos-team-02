@@ -8,6 +8,7 @@ import SearchByKeywords from './SearchByKeywords';
 import Product from './Product';
 import Cart from './Cart';
 import Checkout from './Checkout';
+import Confirmation from './confirmation';
 import About from './About';
 import Contact from './Contact';
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route exact path='/product/:id' component={Product} />
           <Route exact path='/cart' component={Cart} />
           <Route exact path='/checkout' component={Checkout} />
+          <Route exact path='/confirmation' component={Confirmation} />
           <Route exact path='/about' component={About} />
           <Route exact path='/contact' component={Contact} />
         </Switch>
