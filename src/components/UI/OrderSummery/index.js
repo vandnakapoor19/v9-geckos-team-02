@@ -1,5 +1,4 @@
 import React from 'react';
-import "./currentCart.css";
 
 const cartSummary = ({ items }) => (  
     <div className="panel panel-default">

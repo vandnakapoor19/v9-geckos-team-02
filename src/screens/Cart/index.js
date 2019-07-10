@@ -21,13 +21,8 @@ const Cart = () => (
       </div>
 
       <div className='col-md-4 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6'>
-        <div className="panel panel-default">
-          <div className="panel-heading text-center">
-            <h4>Order Summary</h4>
-          </div>
-          <div className="panel-body"><CurrentOrderSummary /></div>
+       <CurrentOrderSummary /> 
         </div>
-      </div>
 
 
 
