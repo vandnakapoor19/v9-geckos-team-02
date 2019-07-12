@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Button = ({submit}) => (
-    <button 
+const Button = ({ click, name }) => (
+    <button
         className="btn btn-checkout my-5"
-        onClick={submit}
-    >Place Order</button>
+        onClick={click}
+    >{name}</button>
 )
 
 export default Button;

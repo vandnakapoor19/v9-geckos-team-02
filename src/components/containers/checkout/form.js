@@ -5,8 +5,8 @@ import Button from '../../UI/button';
 
 import FormValidator from './formValidator';
 
-import {checkout} from '../../../actions/checkout';
-import {connect} from 'react-redux';
+import { checkout } from '../../../actions/checkout';
+import { connect } from 'react-redux';
 
 import { withRouter } from 'react-router-dom';
 
@@ -147,7 +147,8 @@ class CheckoutForm extends Component {
       card_type: 'Visa',
       exp_month: '',
       exp_year: '',
-      validation: this.validator.valid()
+      validation: this.validator.valid(),
+      button_name: "Place Order"
     }
 
     this.submitted = false;
@@ -175,27 +176,27 @@ class CheckoutForm extends Component {
       this.props.dispatch(checkout(checkoutData));
       this.props.history.push({
         pathname: "/confirmation"
-    })
+      })
     }
   }
 
   render() {
     let validation = this.submitted ?
-                      this.validator.validate(this.state) :
-                      this.state.validation;
+      this.validator.validate(this.state) :
+      this.state.validation;
     // console.log('validation:', validation)
     return (
       <div className='mb-5'>
         <AddressForm
           inputChange={this.handleInputChange}
-          validation = {validation}
+          validation={validation}
         />
-        <CreditCartForm 
+        <CreditCartForm
           inputChange={this.handleInputChange}
-          validation = {validation}
+          validation={validation}
         />
         <br />
-        <Button submit={this.handleFormSumbit} />
+        <Button click={this.handleFormSumbit} name={this.state.button_name} />
       </div>
     )
   }
