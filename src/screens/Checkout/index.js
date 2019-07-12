@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckoutFlow from '../../components/containers/checkoutFlow';
+import CheckoutFlow from '../../components/containers/flow/checkoutFlow';
 import CurrentOrderSummary from '../../components/containers/CurrentOrderSummary';
 import CheckoutForm from '../../components/containers/checkout/form';
 

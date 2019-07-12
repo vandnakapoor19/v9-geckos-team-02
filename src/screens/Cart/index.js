@@ -1,7 +1,7 @@
 import React from 'react';
 import CurrentCartContainer from '../../components/containers/CurrentCartContainer';
 
-import CartFlow from '../../components/containers/cartFlow';
+import CartFlow from '../../components/containers/flow/cartFlow';
 import CurrentOrderSummary from '../../components/containers/CurrentOrderSummary';
 
 

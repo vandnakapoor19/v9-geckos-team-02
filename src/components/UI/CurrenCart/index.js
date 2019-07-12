@@ -11,7 +11,7 @@ const CurrentCart = ({ items, addClick, reduceClick, deleteClick }) => (
                 {items.map((item) =>
                     <div key={item.id}>
                         <hr />
-                        <div className="row row justify-content-between">
+                        <div className="row justify-content-between">
 
                             <div className="col-xs-3 col-md-3 my-1">
                                 <img className="img-responsive imgSize" src={item.img} alt={item.id} />
