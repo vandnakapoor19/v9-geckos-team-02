@@ -17,6 +17,13 @@
     margin-bottom: 15px;
 }
 
+button {
+    background-color: orange;
+    color: white;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
 .btn-minus {
     cursor: pointer;
     font-size: 30px;
@@ -73,4 +80,13 @@ div.section>div>input {
     padding-right: 5px;
     max-width: 18%;
     text-align: center;
+}
+
+h5.product-name {
+    color: gray;
+    cursor: pointer;
+}
+
+h5.product-name:hover {
+    color: orange;
 }
