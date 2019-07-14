@@ -14,8 +14,8 @@ const ProductImage = props => {
                     smallImage: {
                         alt: props.title,
                         src: props.watchImg,
-                        // width: 550,
-                        // height: 450
+                        width: 200,
+                        height: 200
                     },
                     largeImage: {
                         src: props.watchImg,
