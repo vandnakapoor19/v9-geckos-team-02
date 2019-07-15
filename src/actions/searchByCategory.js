@@ -29,7 +29,6 @@ export const searchByCtg = id => {
         dispatch(searchCtgStart());
         axios
             .get(URL,
-            // { crossdomain: true }
             { adapter: jsonpAdapter }
             )
             .then(res => {

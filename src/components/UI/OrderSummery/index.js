@@ -23,6 +23,7 @@ class cartSummary extends Component {
 
     calcQuality = i => i.reduce((acc, cur) => acc + cur.quality, 0)
 
+
     render() {
         const { items } = this.props;
         const { isCodeClick, msg } = this.state;

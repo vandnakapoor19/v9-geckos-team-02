@@ -1,5 +1,4 @@
 import React from 'react';
-// import detail from '../containers/product/detail';
 
 const ModalCart = ({ details, quality, showModal, toggleModal, viewCart }) => (
     <div

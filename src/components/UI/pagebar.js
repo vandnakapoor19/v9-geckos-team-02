@@ -1,5 +1,4 @@
 import React from 'react';
-// import { prevPage } from '../../actions/changePage';
 
 const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) => (
     <nav aria-label="Page navigation">
@@ -9,7 +8,6 @@ const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) 
                 <a
                     className="page-link"
                     href="# "
-                    // href={path}
                     aria-label="Previous"
                     onClick={e => {
                         e.preventDefault();
@@ -26,7 +24,6 @@ const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) 
                     <a
                         className="page-link"
                         href="# "
-                        // href={path}
                         onClick={e => {
                             e.preventDefault();
                             toPage(url, p)
