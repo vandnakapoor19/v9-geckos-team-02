@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Flow from '../../UI/ShoppingFlow';
 
-class CheckoutFlow extends Component {
+class ConfirmFlow extends Component {
     state = {
         isCartActive: 'active',
         isCOActive: 'active',
@@ -20,4 +20,4 @@ class CheckoutFlow extends Component {
     }
 }
 
-export default CheckoutFlow;
+export default ConfirmFlow;

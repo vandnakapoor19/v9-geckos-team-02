@@ -81,8 +81,7 @@ class ProductDetail extends Component {
                         >-</button>
                     </div>
                 </div>
-
-
+                <br />
                 <button
                     type="button"
                     className="btn btn-success"

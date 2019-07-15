@@ -1,19 +1,16 @@
 import React from 'react';
-import CheckoutFlow from '../../components/containers/flow/checkoutFlow';
+import ConfirmFlow from '../../components/containers/flow/confirmFlow';
 import CurrentOrderSummary from '../../components/containers/CurrentOrderSummary';
 import ConfirmInfo from '../../components/containers/confirmation/info';
-import { NavLink } from 'react-router-dom';
 
 const Confirmation = () => (
     <div className="container">
 
         <div className="container m-5">
-            <CheckoutFlow />
+            <ConfirmFlow />
             <br />
         </div>
 
-        <h3>Thank you for your order.</h3>
-        <p>If you have any questions about your order, please <NavLink to="/contact">Contact us</NavLink></p>
 
         <div className="row justify-content-between">
             <br />
