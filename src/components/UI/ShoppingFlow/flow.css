@@ -14,6 +14,19 @@
     margin:0;color:#D3441C;
     opacity:1.0;
 }
+
+i.fa.fa-trash {
+  cursor: pointer;
+}
+i.fa.fa-trash:hover {
+  color: #D3441C;
+}
+.my-1.ml-3 {
+  cursor: pointer;
+}
+.my-1.ml-3:hover {
+  color: #D3441C;
+}
 .step .caret.right {
     right:1px;
     top:0px;
