@@ -15,7 +15,7 @@ class ConfirmInfo extends Component {
         //can I use redirect to here?
         this.props.history.push({
             pathname: "/"
-          })
+        })
     }
 
     render () {

@@ -35,7 +35,7 @@ class Category extends Component {
             {
                 itemId: 11450,
                 title: "Clothes, Shoes & Accessories",
-                galleryURL: "https://www.nextdirect.com/nxtcms/resource/image/814562/landscape_ratio4x3/400/300/72cb8176ac8618b2ac1274c07d17a7/QK/dt-newin.jpg"
+                galleryURL: "https://www.thespruce.com/thmb/dmmZcLq0Ay7SntGeq3ND86KD5EA=/400x300/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-860455582-5a0dbf8eec2f640036cb884f.jpg"
             },
             {
                 itemId: 58058,

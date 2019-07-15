@@ -2,8 +2,9 @@ import React from 'react';
 
 const List = ({ click, pageTitle, resultItems }) => (
 
-    <div className="container text-center my-4 ">
-        <h1>{pageTitle}</h1>
+    <div className="container my-3">
+        <div className="page-title mt-4">{pageTitle}</div>
+    
         <div className="row">
             {resultItems && resultItems.map((item, index) => <div
                 key={index}
