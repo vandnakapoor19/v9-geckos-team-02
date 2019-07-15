@@ -156,8 +156,6 @@ class CheckoutForm extends Component {
 
   handleInputChange = e => {
     e.preventDefault();
-    // console.log('e.target.value:',e.target.value);
-    // console.log('e.target.name:',e.target.name)
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -170,9 +168,7 @@ class CheckoutForm extends Component {
     this.submitted = true;
     const { first_name, last_name, phone, email, address, city, state, zip, name_on_card, card_number, card_type, card_CVV, exp_month, exp_year } = this.state;
     const checkoutData = { first_name, last_name, phone, email, address, city, state, zip, name_on_card, card_number, card_type, card_CVV, exp_month, exp_year };
-    console.log('validation:', validation)
     if (validation.isValid) {
-      // console.log('checkout_data:', checkoutData)
       this.props.dispatch(checkout(checkoutData));
       this.props.history.push({
         pathname: "/confirmation"
@@ -184,7 +180,6 @@ class CheckoutForm extends Component {
     let validation = this.submitted ?
       this.validator.validate(this.state) :
       this.state.validation;
-    // console.log('validation:', validation)
     return (
       <div className='mb-5'>
         <AddressForm

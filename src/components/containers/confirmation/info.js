@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {clearCart} from '../../../actions/addToCart';
 
 import Button from '../../UI/button';
 import Confirmation from '../../UI/confirmation';
@@ -12,6 +13,7 @@ class ConfirmInfo extends Component {
     }
 
     clickToHomepage = () => {
+        this.props.dispatch(clearCart());
         //can I use redirect to here?
         this.props.history.push({
             pathname: "/"

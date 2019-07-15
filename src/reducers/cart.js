@@ -36,6 +36,8 @@ const cart = (state = [], action) => {
             })
         case 'DELETE_ITEM':
             return state.filter(item => item.id !== action.id)
+        case 'CLEAR_CART':
+            return [];
         default:
             return state;
     }
