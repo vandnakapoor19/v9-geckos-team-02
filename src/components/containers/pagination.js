@@ -72,7 +72,7 @@ class Pagination extends Component {
         // console.log('location:', this.getPath());
         // console.log('page:', curPage)
         return (
-            <div>
+            <div className="d-flex justify-content-center mb-4">
                 <Pagebar
                     curPage={curPage}
                     pages={pages}

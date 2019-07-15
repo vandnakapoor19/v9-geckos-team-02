@@ -1,16 +1,17 @@
 .step {
     background:#eee;
     font-size:1em;
-    color:#ccc;
-    padding:15px;
+    color:#000;
+    padding:12px;
     font-size:1.25em;
 }
 .step.active {
-    color:#3C763D;
+    color:#fff;
+    background-color: #D3441C;
 }
 .step .caret {
     position:absolute;
-    margin:0;color:#eee;
+    margin:0;color:#D3441C;
     opacity:1.0;
 }
 .step .caret.right {

@@ -1,15 +1,13 @@
 import React from 'react';
-// import { prevPage } from '../../actions/changePage';
 
 const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) => (
-    <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation">
         <ul className="pagination">
 
             <li className="page-item">
                 <a
                     className="page-link"
                     href="# "
-                    // href={path}
                     aria-label="Previous"
                     onClick={e => {
                         e.preventDefault();
@@ -21,25 +19,11 @@ const Pagebar = ({ curPage, url, toPrevPage, toNextPage, path, toPage, pages }) 
                 </a>
             </li>
 
-            {/* <li className="page-item">
-                <a
-                    className="page-link"
-                    // href="# "
-                    href={path}
-                    onClick={e => {
-                        e.preventDefault();
-                        toPage(url, curPage)
-                    }}
-                >{curPage}</a></li>
-            <li className="page-item"><a className="page-link" href="# ">2</a></li>
-            <li className="page-item"><a className="page-link" href="# ">3</a></li> */}
-
             {pages.map((p, index) =>
                 <li className="page-item" key={index}>
                     <a
                         className="page-link"
                         href="# "
-                        // href={path}
                         onClick={e => {
                             e.preventDefault();
                             toPage(url, p)

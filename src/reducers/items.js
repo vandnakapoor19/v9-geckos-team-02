@@ -30,7 +30,6 @@ const items = (state = initState, action) => {
             return {
                 ...state,
                 searchByCtgIsFetching: false,
-                // curPage: 1,
                 err: action.err
             }
         case 'SEARCH_KW_START':
@@ -83,7 +82,6 @@ const items = (state = initState, action) => {
         case 'PREV_PAGE_SUCCESS':
             return {
                 ...state,
-                // curPage: state.curPage > 1 ? state.curPage - 1 : state.curPage,
                 prevPageIsFetching: false,
                 data: action.items,
                 err: ''

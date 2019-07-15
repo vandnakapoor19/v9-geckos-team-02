@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 import CurrentCart from '../UI/CurrenCart';
+import Button from '../UI/button';
 
 import {connect} from 'react-redux';
 import * as actions from '../../actions/addToCart';
 
+import { withRouter } from "react-router-dom";
+
 class CurrentCartContainer extends Component{
+    state = {
+        button_name: 'Place Order'
+    }
 
     addClick = id => {
         this.props.dispatch(actions.addQuality(id))
@@ -18,6 +24,12 @@ class CurrentCartContainer extends Component{
         this.props.dispatch(actions.deleteItem(id))
     }
 
+    buttonClick = () => {
+        this.props.history.push({
+            pathname: "/checkout"
+        })
+    }
+
     render (){
         return (
             <div>
@@ -27,6 +39,10 @@ class CurrentCartContainer extends Component{
                 reduceClick={this.reduceClick}
                 deleteClick={this.deleteClick}
             />
+            <Button 
+                name={this.state.button_name}
+                click={this.buttonClick}
+                />
         </div>
         )
     }  
@@ -37,4 +53,4 @@ const mapStateToProps = state => {
         items: state.cart
     }
 }
-export default connect(mapStateToProps)(CurrentCartContainer);
+export default withRouter(connect(mapStateToProps)(CurrentCartContainer));

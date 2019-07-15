@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Flow from '../UI/ShoppingFlow';
+import Flow from '../../UI/ShoppingFlow';
 
 class CheckoutFlow extends Component {
     state = {
